@@ -1,16 +1,20 @@
-# flutter_employee
+User Authentication: Sign in with your Google account to get started.
 
-A new Flutter project.
+View Employees: See a list of all employees in the system.
 
-## Getting Started
+View Employee Details: Tap on an employee to see their detailed profile.
 
-This project is a starting point for a Flutter application.
+Add New Employees: Easily add new employees to the system.
 
-A few resources to get you started if this is your first Flutter project:
+Offline Support: The app provides a user-friendly experience even when you're offline.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Localization: Available in both English and Hindi.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Push Notifications: Stay updated with Firebase push notifications.
+
+Current Status
+All features are fully functional, with the exception of the following:
+
+Update (PUT) Employee: The functionality to update an existing employee's information has not been implemented yet.
+
+Delete Employee: The functionality to delete an employee from the system has not been implemented yet.
