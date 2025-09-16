@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_employee/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../providers/get_providers.dart';
@@ -60,9 +61,10 @@ class _CreateUserPageState extends ConsumerState<CreateUserPage> {
     });
 
     final addUserState = ref.watch(addUserProvider);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Create New User')),
+      appBar: AppBar(title: Text(appLocalizations.createUser)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -70,23 +72,29 @@ class _CreateUserPageState extends ConsumerState<CreateUserPage> {
             children: [
               TextField(
                 controller: _firstNameController,
-                decoration: const InputDecoration(labelText: 'First Name'),
+                decoration: InputDecoration(
+                  labelText: appLocalizations.firstName,
+                ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: _lastNameController,
-                decoration: const InputDecoration(labelText: 'Last Name'),
+                decoration: InputDecoration(
+                  labelText: appLocalizations.lastName,
+                ),
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: _emailController,
-                decoration: const InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: appLocalizations.email),
                 keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 10),
               TextField(
                 controller: _avatarController,
-                decoration: const InputDecoration(labelText: 'Avatar URL'),
+                decoration: InputDecoration(
+                  labelText: appLocalizations.avatarUrl,
+                ),
                 keyboardType: TextInputType.url,
               ),
               const SizedBox(height: 20),
@@ -94,7 +102,7 @@ class _CreateUserPageState extends ConsumerState<CreateUserPage> {
                 onPressed: addUserState.isLoading ? null : _submit,
                 child: addUserState.isLoading
                     ? const CircularProgressIndicator(color: Colors.white)
-                    : const Text('Create User'),
+                    : Text(appLocalizations.createUserButton),
               ),
             ],
           ),

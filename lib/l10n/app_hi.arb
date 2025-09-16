@@ -1,0 +1,22 @@
+{
+  "@@locale": "hi",
+  "employeeConnect": "कर्मचारी कनेक्ट",
+  "connectingYouWithYourTeam": "आपको अपनी टीम से जोड़ रहा है।",
+  "signInWithGoogle": "Google से साइन इन करें",
+  "skipForNow": "अभी के लिए छोड़ें",
+  "dashboard": "डैशबोर्ड",
+  "profile": "प्रोफ़ाइल",
+  "signOut": "साइन आउट",
+  "noInternetConnection": "कोई इंटरनेट कनेक्शन नहीं",
+  "checkYourConnection": "कृपया अपना कनेक्शन जांचें। नेटवर्क वापस आने पर ऐप स्वचालित रूप से फिर से लोड हो जाएगा।",
+  "offlineCannotCreateUser": "ऑफ़लाइन: उपयोगकर्ता नहीं बना सकते।",
+  "userDetails": "उपयोगकर्ता विवरण",
+  "createUser": "नया उपयोगकर्ता बनाएँ",
+  "firstName": "पहला नाम",
+  "lastName": "अंतिम नाम",
+  "email": "ईमेल",
+  "avatarUrl": "अवतार यूआरएल",
+  "createUserButton": "उपयोगकर्ता बनाएँ",
+  "userCreatedSuccessfully": "उपयोगकर्ता सफलतापूर्वक बनाया गया!",
+  "youAreNotSignedIn": "आपने साइन इन नहीं किया है।"
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_employee/l10n/app_localizations.dart';
 import 'home_page.dart';
 import '../../route.dart';
 import '../../service/auth/google_sign_auth.dart';
@@ -40,6 +41,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+     final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
     return Scaffold(
       body: Center(
         child: Padding(
@@ -54,22 +56,22 @@ class _LoginPageState extends State<LoginPage> {
                 color: Color(0xFF4A90E2),
               ),
               const SizedBox(height: 16),
-              const Text(
-                'Employee Connect',
+               Text(
+               appLocalizations.employeeConnect,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
-              const Text(
-                'Connecting you with your team.',
+               Text(
+                 appLocalizations.connectingYouWithYourTeam,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
               ),
               const SizedBox(height: 40),
               ElevatedButton.icon(
                 icon: Image.asset('assets/images/search.png', height: 24.0),
-                label: const Text(
-                  'Sign in with Google',
+                label:  Text(
+                  appLocalizations.signInWithGoogle,
                   style: TextStyle(fontSize: 16, color: Colors.black87),
                 ),
                 onPressed: _signWithGoogle,
@@ -83,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               TextButton(
-                child: Text('Skip for now'),
+                child: Text(appLocalizations.skipForNow),
                 onPressed: () {
                   NavigationHelper.pushReplacement(context, HomePage());
                 },

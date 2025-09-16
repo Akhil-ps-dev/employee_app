@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "employeeConnect": "Employee Connect",
+  "connectingYouWithYourTeam": "Connecting you with your team.",
+  "signInWithGoogle": "Sign in with Google",
+  "skipForNow": "Skip for now",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+  "signOut": "Sign Out",
+  "noInternetConnection": "No Internet Connection",
+  "checkYourConnection": "Please check your connection. The app will reload automatically when the network returns.",
+  "offlineCannotCreateUser": "Offline: Cannot create user.",
+  "userDetails": "User Details",
+  "createUser": "Create New User",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "avatarUrl": "Avatar URL",
+  "createUserButton": "Create User",
+  "userCreatedSuccessfully": "User created successfully!",
+  "youAreNotSignedIn": "You are not signed in."
+}

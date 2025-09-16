@@ -1,5 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_employee/l10n/app_localizations.dart';
+import 'package:flutter_employee/providers/locale_provider.dart';
 import '../../core/network_prblm.dart';
 import 'profile_page.dart';
 import 'user_detail_page.dart';
@@ -20,11 +22,26 @@ class HomePage extends ConsumerWidget {
         connectivity.value?.contains(ConnectivityResult.none) ?? false;
 
     final authState = ref.watch(authStateProvider);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
+    final String currentLanguage = Localizations.localeOf(context).languageCode;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dashboard'),
+        title: Text(appLocalizations.dashboard),
 
         actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Center(
+              child: Text(
+                'Lang: $currentLanguage',
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
           authState.when(
             data: (user) {
               if (user != null && user.photoURL != null) {
@@ -59,15 +76,21 @@ class HomePage extends ConsumerWidget {
             error: (err, stack) =>
                 const Icon(Icons.error_outline, color: Colors.red),
           ),
-
-          // IconButton(
-          //   icon: const Icon(Icons.logout),
-          //   tooltip: 'Sign Out',
-          //   onPressed: () {
-          //     GoogleSignInService.signOut();
-          //     NavigationHelper.pushReplacement(context, LoginPage());
-          //   },
-          // ),
+          PopupMenuButton<Locale>(
+            onSelected: (Locale locale) {
+              ref.read(localeProvider.notifier).state = locale;
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<Locale>>[
+              const PopupMenuItem<Locale>(
+                value: Locale('en'),
+                child: Text('English'),
+              ),
+              const PopupMenuItem<Locale>(
+                value: Locale('hi'),
+                child: Text('हिंदी'),
+              ),
+            ],
+          ),
         ],
       ),
 

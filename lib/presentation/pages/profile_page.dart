@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_employee/l10n/app_localizations.dart';
 import 'login_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/auth_provider.dart';
@@ -11,13 +12,14 @@ class ProfilePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authStateProvider);
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile')),
+      appBar: AppBar(title:  Text(appLocalizations.profile)),
       body: authState.when(
         data: (user) {
           if (user == null) {
-            return const Center(child: Text('You are not signed in.'));
+            return  Center(child: Text(appLocalizations.youAreNotSignedIn));
           }
 
           return Center(
@@ -57,7 +59,7 @@ class ProfilePage extends ConsumerWidget {
                   // Sign Out Button
                   ElevatedButton.icon(
                     icon: const Icon(Icons.logout),
-                    label: const Text('Sign Out'),
+                    label:  Text(appLocalizations.signOut),
                     onPressed: () {
                       GoogleSignInService.signOut();
                       NavigationHelper.pushReplacement(context, LoginPage());

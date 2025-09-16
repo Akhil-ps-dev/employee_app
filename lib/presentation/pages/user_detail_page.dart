@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_employee/l10n/app_localizations.dart';
 import '../../providers/get_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,9 +10,10 @@ class UserDetailPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final asyncUser = ref.watch(userDetailProvider(userId));
+    final AppLocalizations appLocalizations = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('User Details')),
+      appBar: AppBar(title: Text(appLocalizations.userDetails)),
       body: asyncUser.when(
         data: (user) {
           return Center(
