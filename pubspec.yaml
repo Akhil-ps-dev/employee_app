@@ -44,8 +44,9 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
   connectivity_plus: ^6.0.3
-  
+  firebase_messaging: ^16.0.1
   flutter_localization: ^0.3.3
+  flutter_local_notifications: ^19.4.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
