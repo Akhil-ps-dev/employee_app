@@ -1,20 +1,34 @@
-User Authentication: Sign in with your Google account to get started.
+# Employee Management App
 
-View Employees: See a list of all employees in the system.
+## Features
 
-View Employee Details: Tap on an employee to see their detailed profile.
+- **User Authentication**  
+  Sign in with your Google account to get started.
 
-Add New Employees: Easily add new employees to the system.
+- **View Employees**  
+  See a list of all employees in the system.
 
-Offline Support: The app provides a user-friendly experience even when you're offline.
+- **View Employee Details**  
+  Tap on an employee to see their detailed profile.
 
-Localization: Available in both English and Hindi.
+- **Add New Employees**  
+  Easily add new employees to the system.
 
-Push Notifications: Stay updated with Firebase push notifications.
+- **Offline Support**  
+  The app provides a user-friendly experience even when you're offline.
 
-Current Status
+- **Localization**  
+  Available in both English and Hindi.
+
+- **Push Notifications**  
+  Stay updated with Firebase push notifications.
+
+## 🚧 Current Status
+
 All features are fully functional, with the exception of the following:
 
-Update (PUT) Employee: The functionality to update an existing employee's information has not been implemented yet.
+- **Update (PUT) Employee**  
+  The functionality to update an existing employee's information has not been implemented yet.
 
-Delete Employee: The functionality to delete an employee from the system has not been implemented yet.
+- **Delete Employee**  
+  The functionality to delete an employee from the system has not been implemented yet.
